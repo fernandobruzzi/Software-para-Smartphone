@@ -33,7 +33,7 @@ void main(){
 
     List<int> perfect_numbers = [];
     List<List<int>> perfect_numbers_list = [];
-    for(int i = a; i < b; i++){
+    for(int i = a; i <= b; i++){
       var result = perfectNum(i);
       if(result !=null){
         var (pNum, divisorspNum) = result;
@@ -81,7 +81,7 @@ void main(){
 (int, List<int>)? perfectNum(int num){
 
   // first we get the numbers that divide our num
-  var divisores = divisores_proprios(num);
+  List<int> divisores = divisores_proprios(num);
 
   // then we check if the divisors sum to num
   int sum = 0;
@@ -116,6 +116,7 @@ void main(){
     }
   }
   if(greatest_div != null){
+    // then we found a abundant number so we can return
     return(greatest_num, greatest_sum, greatest_div);
   }
   return null;
