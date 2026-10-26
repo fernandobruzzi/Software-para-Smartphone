@@ -64,8 +64,6 @@ void main(){
       print("Nenhum número abundante encontrado na faixa entre $a e $b.");
     }
     return;
-    
-    print("Não é vazio!");
   } else if (double.tryParse(parts[0]) != null || double.tryParse(parts[1]) != null ) {
     print("Por favor forneça dois números inteiros positivos.");
   } else if (parts[0].contains(',') || parts[1].contains(',')) {
